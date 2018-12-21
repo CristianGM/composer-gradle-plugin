@@ -3,6 +3,7 @@ plugins {
   kotlin("jvm")
   `maven-publish`
   `kotlin-dsl`
+  id("com.gradle.plugin-publish") version "0.10.0"
 }
 
 gradlePlugin {
@@ -12,6 +13,12 @@ gradlePlugin {
       implementationClass = "com.trevjonez.composer.ComposerPlugin"
     }
   }
+}
+
+pluginBundle {
+  website = "https://github.com/trevjonez/composer-gradle-plugin"
+  vcsUrl = "git@github.com:trevjonez/composer-gradle-plugin.git"
+  tags = listOf("android", "composer", "test", "orchestrator", "report")
 }
 
 val AGP_VERSION: String by project

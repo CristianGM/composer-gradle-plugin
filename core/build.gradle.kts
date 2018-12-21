@@ -18,6 +18,13 @@ plugins {
   kotlin("jvm")
   `maven-publish`
   `kotlin-dsl`
+  id("com.gradle.plugin-publish") version "0.10.0"
+}
+
+pluginBundle {
+  website = "https://github.com/trevjonez/composer-gradle-plugin"
+  vcsUrl = "git@github.com:trevjonez/composer-gradle-plugin.git"
+  tags = listOf("android", "composer", "test", "orchestrator", "report")
 }
 
 val classpathManifest = tasks.register("createClasspathManifest") {
