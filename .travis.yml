@@ -1,0 +1,28 @@
+language: android
+jdk: oraclejdk8
+
+branches:
+  only:
+    - master
+    - /^\d+\.\d+\.\d+$/
+
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+cache:
+  directories:
+    - $HOME/.gradle/caches/modules-2/
+    - $HOME/.gradle/wrapper/dists/
+
+android:
+  components:
+    - tools
+    - platform-tools
+
+script: ./gradlew check
+
+deploy:
+  - provider: script
+    script: ./gradlew publish
+    on:
+      branch: master
+      tags: true
