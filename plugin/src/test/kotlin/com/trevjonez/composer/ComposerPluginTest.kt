@@ -152,7 +152,7 @@ class ComposerPluginTest {
         "--instrumentation-arguments, screenshotsDisabled, false, screenshotsEngine, uiAutomator",
         "--verbose-output, true",
         "--keep-output-on-exit",
-        "--install-timeout, 10",
+        "--install-timeout, 60",
         "Successfully installed apk",
         "Starting tests",
         "Test run finished, 0 passed, 0 failed",

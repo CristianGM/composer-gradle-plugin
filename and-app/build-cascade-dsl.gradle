@@ -51,7 +51,7 @@ dependencies {
 composer {
     verboseOutput true
     instrumentationArgument('screenshotsDisabled', 'false')
-    apkInstallTimeout 10
+    apkInstallTimeout 60
     configs {
         debug {
             instrumentationArgument('screenshotsEngine', 'uiAutomator')
